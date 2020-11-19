@@ -18,7 +18,7 @@ fi
 fq=$datadir/fqs/$prefix.fq
 
 if [ $1 == align ] ; then
-    ##align the reads using minimap2
+    ##align the reads using minimap2, and the minimap reference
     mkdir -p $datadir/align
 
     minimap2 -ax map-ont -t 36 $refmmi $fq |
